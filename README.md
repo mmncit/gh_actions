@@ -35,19 +35,7 @@ _uses:_
 
 - defines the Docker image that will run the Action.
 
-Create a workflow
-Workflows
-
-- define the event that triggers actions
-- define which action to run
-
-Repositories can contain multiple workflows based on different events
-
-create a workflow
-
-```console
-mkdir -p .github/workflows
-```
+- The “needs” attribute is used to establish dependencies between Actions in a Workflow.
 
 ### Automating with GitHub Actions
 
