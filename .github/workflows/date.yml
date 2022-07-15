@@ -1,0 +1,26 @@
+name: printing dates
+
+on: push
+
+jobs:
+  ubuntu-job:
+    name: Print date in Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: print date
+        run: date "+%H:%M:%S   %d/%m/%y"
+
+  windows-job:
+    name: Print date in widows
+    runs-on: windows-latest
+    steps:
+      - name: print date
+        run: date
+
+  macos-job:
+    name: Print date in macos
+    needs: [ubuntu-job, windows-job] # creating dependencies
+    runs-on: macos-latest
+    steps:
+      - name: print date
+        run: date "+%H:%M:%S   %d/%m/%y"
